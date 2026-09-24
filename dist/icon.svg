@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2545"/>
+      <stop offset="100%" stop-color="#133E6D"/>
+    </linearGradient>
+    <linearGradient id="vGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="vGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16A34A"/>
+      <stop offset="60%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#1D4ED8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background with subtle modern rounding -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Subtle pulse ring in background -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="256" cy="256" r="140" fill="none" stroke="#38BDF8" stroke-opacity="0.1" stroke-width="2" stroke-dasharray="8 8"/>
+
+  <!-- VITTA Monogram / Vitality Symbol (V + Pulse + Shield) -->
+  <g filter="url(#glow)">
+    <!-- Left wing of V (Blue pulse curve) -->
+    <path d="M152 148 C152 148 184 270 256 364 C236 290 208 200 200 148 C196 136 182 128 170 132 C158 136 150 144 152 148 Z" fill="url(#vGrad1)"/>
+    
+    <!-- Main Right wing & Vitality check (Emerald green transition) -->
+    <path d="M228 376 C238 390 258 392 270 380 C316 324 372 232 388 152 C392 136 380 124 366 128 C354 132 344 144 338 160 C306 236 264 316 244 348 Z" fill="url(#vGrad2)"/>
+    
+    <!-- Cross Vitality Spark / Center node -->
+    <circle cx="256" cy="240" r="18" fill="#FFFFFF" fill-opacity="0.95"/>
+    <circle cx="256" cy="240" r="28" fill="none" stroke="#38BDF8" stroke-width="3" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Small cross accent at top right of V -->
+  <path d="M374 116 L374 136 M364 126 L384 126" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
+</svg>
